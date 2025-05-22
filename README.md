@@ -1,6 +1,6 @@
 <div align="center">
 
-# O$^2$-Searcher
+# O²-Searcher
 
 <div>
 🚀 A Searching-based Agent Model for Open-Domain Open-Ended Question Answering 🌟
@@ -16,12 +16,14 @@
 
 Large Language Models (LLMs), despite their advancements, are fundamentally limited by their static parametric knowledge, hindering performance on tasks requiring open-domain up-to-date information. 
 While enabling LLMs to interact with external knowledge environments is a promising solution, current efforts primarily address closed-end problems. Open-ended questions, which characterized by lacking a standard answer or providing non-unique and diverse answers, remain underexplored.
-To bridge this gap, we present O$^2$-Searcher, a novel search agent leveraging reinforcement learning to effectively tackle both open-ended and closed-ended questions in the open domain. O$^2$-Searcher leverages an efficient, locally simulated search environment for dynamic knowledge acquisition, effectively decoupling the external world knowledge from model's sophisticated reasoning processes. It employs a unified training mechanism with meticulously designed reward functions, enabling the agent to identify problem types and adapt different answer generation strategies. 
-Furthermore, to evaluate performance on complex open-ended tasks, we construct O$^2$-QA, a high-quality benchmark featuring 300 manually curated, multi-domain open-ended questions with associated web page caches. Extensive experiments show that O$^2$-Searcher, using only a 3B model, significantly surpasses leading LLM agents on O$^2$-QA. It also achieves SOTA results on various closed-ended QA benchmarks against similarly-sized models, while performing on par with much larger ones.
+To bridge this gap, we present O²-Searcher, a novel search agent leveraging reinforcement learning to effectively tackle both open-ended and closed-ended questions in the open domain. O²-Searcher leverages an efficient, locally simulated search environment for dynamic knowledge acquisition, effectively decoupling the external world knowledge from model's sophisticated reasoning processes. It employs a unified training mechanism with meticulously designed reward functions, enabling the agent to identify problem types and adapt different answer generation strategies. 
+Furthermore, to evaluate performance on complex open-ended tasks, we construct O²-QA, a high-quality benchmark featuring 300 manually curated, multi-domain open-ended questions with associated web page caches. Extensive experiments show that O²-Searcher, using only a 3B model, significantly surpasses leading LLM agents on O²-QA. It also achieves SOTA results on various closed-ended QA benchmarks against similarly-sized models, while performing on par with much larger ones.
+<p align="center">
 <img src="assets/teaser.png" width="500" style="display: block; margin: 0 auto;">
+</p>
 
 ## Updates  📰
-- **`2025-05-26:`** We opensource O$^2$-Searcher codebase and the QA data of O$^2$-QA benchmark.
+- **`2025-05-26:`** We opensource O²-Searcher codebase and the QA data of O²-QA benchmark.
 
 
 ## Getting Started 🎯
@@ -47,7 +49,7 @@ pip install tavily-python
 ```   
 
 ### Training Scripts
-Our training consists of two stages, i.e., Cold Start and GRPO Training:
+The training procedure consists of two stages, i.e., Cold Start and GRPO Training:
 
 1. Cold Start:
 ```bash
@@ -65,7 +67,7 @@ python o2searcher/searcher/run_openended.py --local_url [MEILISEARCH_URL]
 # For closed-ended queries
 python o2searcher/searcher/run_closedended.py --local_url [DENSE_RETRIVER_URL]
 ``` 
-(2) Launch metric server 
+(2) Launch the metric server 
 ```bash
 python o2searcher/rewards/metrics/server.py
 ``` 
@@ -74,7 +76,7 @@ python o2searcher/rewards/metrics/server.py
 ./scripts/train/run_o2searcher_grpo.sh
 ```
 
-We welcome the community to try out different models, context legnths, and RL parameters in the training scripts!
+We welcome the community to try out different models, context lengths, and RL parameters in the training scripts!
 
 ### Inference
 Download the pretrained [weights](https://huggingface.co/Jianbiao/O2-Searcher-Qwen2.5-3B-GRPO).
@@ -98,13 +100,13 @@ python o2searcher/searcher/run_api_tavily.py
 python scripts/eval/infer_agent.py -m [MODEL_PATH] -q [QUERY] -t [TAG]
 ```
 
-3. Test on O$^2$-QA benchmark
+3. Test on O²-QA benchmark
 
-(1) After launchinig the search environment, run inference on test set
+(1) After launching the search environment, run inference on the test set
 ```bash
 python scripts/eval/infer_agent.py -m [MODEL_PATH] -q ./script/eval/query_list.txt -t [TAG]
 ``` 
-(2) Launch metric server 
+(2) Launch the metric server 
 ```bash
 python o2searcher/rewards/metrics/server.py
 ``` 
@@ -115,18 +117,22 @@ python script/eval/test_llm.py --generate_dir [GENERATE_DIR]
 
 ### Preliminary results
 1. Chat cases
+<p align="center">
 <img src="assets/chat_template.png" width="800" style="display: block; margin: 0 auto;">
+</p>
 
 2. Incorporating open-ended data yields superior training stability, longer average
 response lengths, and larger average search turns during the training procedure.
+<p align="center">
 <img src="assets/result.png" width="800" style="display: block; margin: 0 auto;">
+</p>
 
 ## Roadmap 📌
 - [x]  Training Code
 - [x]  Evaluation Code
 - [x]  Data for Coldstart
 - [x]  Data for RL Training
-- [ ]  Local Search Enviroment
+- [ ]  Local Search Environment
 
 ## Acknowledgements
 We utilized the following repos during development:
