@@ -16,7 +16,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--local_url', type=str, default="http://10.1.1.116:10000/search")
+parser.add_argument('--local_url', type=str, default="http://127.0.0.1:10000/search")
 parser.add_argument('--link_tag', type=str, default='href')
 parser.add_argument('--model_name', type=str, default='qwen2.5')
 parser.add_argument('--port', type=int, default=10102)

@@ -10,7 +10,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--port', type=int, default=10001)
-parser.add_argument('--local_url', type=str, default="http://10.1.1.181:8000/retrieve")
+parser.add_argument('--local_url', type=str, default="http://127.0.0.1:8000/retrieve")
 
 args = parser.parse_args()
 
