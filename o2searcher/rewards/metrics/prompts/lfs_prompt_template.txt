@@ -1,0 +1,16 @@
+Your task is to determine the semantic similarity between input findings and target findings.
+
+Input Findings List:
+{input_list_str}
+
+Target Findings List:
+{target_list_str}
+
+Please output the matching pairs strictly in the following JSON format, without any additional explanatory text:
+{json_format}
+
+Important Notes:
+1. Output JSON array only, no additional explanatory text
+2. Use the complete original text for each finding
+3. If no matches are found, output an empty array []
+

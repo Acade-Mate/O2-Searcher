@@ -1,0 +1,4 @@
+{
+    "openended": "http://127.0.0.1:10102/search",
+    "closedended": "http://127.0.0.1:10001/wiki_search"
+}
