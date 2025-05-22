@@ -23,7 +23,7 @@ Furthermore, to evaluate performance on complex open-ended tasks, we construct O
 </p>
 
 ## Updates  📰
-- **`2025-05-26:`** We opensource O²-Searcher codebase and the QA data of O²-QA benchmark.
+- **`2025-05-22:`** We opensource O²-Searcher codebase and the QA data of O²-QA benchmark.
 
 
 ## Getting Started 🎯
@@ -133,6 +133,7 @@ response lengths, and larger average search turns during the training procedure.
 - [x]  Data for Coldstart
 - [x]  Data for RL Training
 - [ ]  Local Search Environment
+- [ ]  Scale Up of Mode Size
 
 ## Acknowledgements
 We utilized the following repos during development:
