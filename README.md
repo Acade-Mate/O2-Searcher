@@ -23,6 +23,7 @@ Furthermore, to evaluate performance on complex open-ended tasks, we construct O
 </p>
 
 ## Updates  📰
+- **`2025-05-23:`** The paper is now available on [arXiv](https://arxiv.org/abs/2505.16582).
 - **`2025-05-22:`** We opensource O²-Searcher codebase and the QA data of O²-QA benchmark.
 
 
@@ -82,7 +83,7 @@ We welcome the community to try out different models, context lengths, and RL pa
 Download the pretrained [weights](https://huggingface.co/Jianbiao/O2-Searcher-Qwen2.5-3B-GRPO).
 
 
-1. Launch the [local search environment]() or use web searching as follows:
+1. Launch the [local search environment](./o2searcher/searcher/search_env/README.md) or use web searching as follows:
   
 (1) Local search environment
 ```bash
@@ -149,10 +150,13 @@ We utilized the following repos during development:
 If you find our paper and codes useful, please kindly cite us via:
 
 ```bibtex
-@article{mei2025O2Searcher,
-    title={O$^2$-Searcher: A Searching-based Agent Model for Open-Domain Open-Ended Question Answering}, 
+@misc{mei2025o2searcher,
+    title={O$^2$-Searcher: A Searching-based Agent Model for Open-Domain Open-Ended Question Answering},
     author={Jianbiao Mei and Tao Hu and Daocheng Fu and Licheng Wen and Xuemeng Yang and Rong Wu and Pinlong Cai and Xing Gao and Yu Yang and Chengjun Xie and Botian Shi and Yong Liu and Yu Qiao},
-    year={2025}
+    year={2025},
+    eprint={2505.16582},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
 }
 
 ```
