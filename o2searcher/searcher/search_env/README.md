@@ -1,7 +1,7 @@
 # O²-Searcher - local search environment
 
 ## Getting Started 🎯
-### Installation
+### 1. Installation
 
 ```bash
 conda create -n searcher python=3.10
@@ -22,7 +22,9 @@ pip install meilisearch
 
 ```
 
-## 2. For Web Knowledge Search on Web pages
+### 2. For Web Knowledge Search on Web pages
+
+First, download the [Web Knowledge Corpus](https://huggingface.co/datasets/TaoTao0216/O2-QA-Web_data) and put it in the `web_search/data` folder.
 
 
 ```bash
@@ -32,12 +34,15 @@ curl -L https://install.meilisearch.com | sh
 
 ./meilisearch --master-key="Web_Knowledge_Corpus"
 
+# start another terminal 
 python web_data_upload.py
+
+#wait for about 10 Minutes for data indexing
 
 python web_search.py
 ```
 
-## 3. For Structured Knowledge Search on Wikipedia
+### 3. For Structured Knowledge Search on Wikipedia
 
 3.1 Download the wikipedia data
 

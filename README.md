@@ -133,7 +133,7 @@ response lengths, and larger average search turns during the training procedure.
 - [x]  Evaluation Code
 - [x]  Data for Coldstart
 - [x]  Data for RL Training
-- [ ]  Local Search Environment
+- [x]  Local Search Environment
 - [ ]  Scale Up of Mode Size
 
 ## Acknowledgements
