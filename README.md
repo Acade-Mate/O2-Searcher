@@ -152,7 +152,7 @@ If you find our paper and codes useful, please kindly cite us via:
 ```bibtex
 @misc{mei2025o2searcher,
     title={O$^2$-Searcher: A Searching-based Agent Model for Open-Domain Open-Ended Question Answering},
-    author={Jianbiao Mei and Tao Hu and Daocheng Fu and Licheng Wen and Xuemeng Yang and Rong Wu and Pinlong Cai and Xing Gao and Yu Yang and Chengjun Xie and Botian Shi and Yong Liu and Yu Qiao},
+    author={Jianbiao Mei and Tao Hu and Daocheng Fu and Licheng Wen and Xuemeng Yang and Rong Wu and Pinlong Cai and Xinyu Cai and Xing Gao and Yu Yang and Chengjun Xie and Botian Shi and Yong Liu and Yu Qiao},
     year={2025},
     eprint={2505.16582},
     archivePrefix={arXiv},
