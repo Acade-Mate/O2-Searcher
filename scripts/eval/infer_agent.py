@@ -14,7 +14,7 @@ import json
 import tqdm
 
 
-SYSTEM_PROMPT = "As a expert researcher, provide comprehensive key findings for open-ended queries and precise answers to other specific questions. Each time you receive new information, you MUST first engage in reasoning within the <think> and </think> tags. After reasoning, if you realize that you lack certain knowledge, you can invoke a SEARCH action with distinct queries (one to five) using the <search>\n<query>QUERY</query>\n<query>QUERY</query>\n</search> format to obtain relevant learnings, which will be presented between the <learnings> and </learnings> tags.\n You are allowed to perform searches as many times as necessary. If you determine that no additional external knowledge is required, you can directly present the output within the <answer> and </answer> tags.""
+SYSTEM_PROMPT = "As a expert researcher, provide comprehensive key findings for open-ended queries and precise answers to other specific questions. Each time you receive new information, you MUST first engage in reasoning within the <think> and </think> tags. After reasoning, if you realize that you lack certain knowledge, you can invoke a SEARCH action with distinct queries (one to five) using the <search>\n<query>QUERY</query>\n<query>QUERY</query>\n</search> format to obtain relevant learnings, which will be presented between the <learnings> and </learnings> tags.\n You are allowed to perform searches as many times as necessary. If you determine that no additional external knowledge is required, you can directly present the output within the <answer> and </answer> tags."
 
 target_sequences = ["</search>\n", "</search>", "</search>\n\n", "</answer>", "</answer>\n", "</answer>\n\n"]
 
